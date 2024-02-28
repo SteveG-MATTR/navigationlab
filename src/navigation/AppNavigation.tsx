@@ -25,7 +25,7 @@ declare global {
   }
 }
 
-const Stack = createStackNavigator<AppNavigationParams>();
+const Stack = createNativeStackNavigator<AppNavigationParams>();
 
 const AppNavigation = () => (
   <>
@@ -44,7 +44,7 @@ const AppNavigation = () => (
         name="MyModal"
         component={MyModal}
         options={({navigation}) => ({
-          presentation: 'modal',
+          presentation: 'fullScreenModal',
           headerLeft: () => <Button title="X" onPress={navigation.goBack} />,
         })}
       />
